@@ -1,0 +1,10 @@
+data modify storage practice:towers towers[{index:0b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:0b}}].enabled
+data modify storage practice:towers towers[{index:1b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:1b}}].enabled
+data modify storage practice:towers towers[{index:2b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:2b}}].enabled
+data modify storage practice:towers towers[{index:3b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:3b}}].enabled
+data modify storage practice:towers towers[{index:4b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:4b}}].enabled
+data modify storage practice:towers towers[{index:5b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:5b}}].enabled
+data modify storage practice:towers towers[{index:6b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:6b}}].enabled
+data modify storage practice:towers towers[{index:7b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:7b}}].enabled
+data modify storage practice:towers towers[{index:8b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:8b}}].enabled
+data modify storage practice:towers towers[{index:9b}].enabled set from storage practice:gui pages[0].entries[{tag:{index:9b}}].enabled

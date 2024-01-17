@@ -1,0 +1,32 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:alternatives",
+            "children": [
+              {
+                "type": "minecraft:dynamic",
+                "name": "minecraft:contents",
+                "conditions": [
+                  {
+                    "condition": "minecraft:match_tool",
+                    "predicate": {
+                      "nbt": "{drop_contents:1b}"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "minecraft:loot_table",
+                "name": "minecraft:blocks/white_shulker_box_default"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
