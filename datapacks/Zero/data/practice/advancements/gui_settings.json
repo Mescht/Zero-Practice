@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "block": "minecraft:chest",
+              "nbt": "{CustomName:'{\"text\":\"Settings\"}'}"
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "practice:gui/pages/settings/set_active"
+    }
+  }
+  

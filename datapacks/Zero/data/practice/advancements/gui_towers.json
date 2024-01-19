@@ -1,0 +1,19 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "location": {
+            "block": {
+              "block": "minecraft:chest",
+              "nbt": "{CustomName:'{\"text\":\"Towers\"}'}"
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "practice:gui/pages/home/set_active"
+    }
+  }
+  

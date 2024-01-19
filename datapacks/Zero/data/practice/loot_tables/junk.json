@@ -1,0 +1,14 @@
+{
+    "pools": [
+      {
+        "rolls": 60,
+        "entries": [
+          {
+            "type": "minecraft:loot_table",
+            "name": "minecraft:gameplay/piglin_bartering"
+          }
+        ]
+      }
+    ]
+  }
+  

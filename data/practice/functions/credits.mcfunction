@@ -1,2 +1,0 @@
-tellraw @a [{"text":"Map made by ","color":"gold"},{"text":"Mescht","color":"yellow"}]
-tellraw @a {"text":"[More info]","color":"gold","clickEvent":{"action":"open_url","value":"https://github.com/Mescht/Zero-Practice"}}
