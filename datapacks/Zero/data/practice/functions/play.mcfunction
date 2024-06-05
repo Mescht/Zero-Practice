@@ -8,10 +8,12 @@ scoreboard players operation direction_act settings = direction settings
 execute if score direction settings matches 2 run scoreboard players set direction_act settings 0
 execute if score direction settings matches 2 if predicate practice:rand_12.5 run scoreboard players set direction_act settings 1
 
+function practice:level/load_fountain
 function practice:level/load_spawn
 function practice:level/choose_tower
 function practice:level/set_tower_order
 function practice:level/load_towers
+function practice:level/load_terrain
 function practice:nodes/force
 
 # spawn dragon

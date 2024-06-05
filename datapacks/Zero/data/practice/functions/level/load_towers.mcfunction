@@ -13,10 +13,3 @@ scoreboard players add @e[tag=tower] tower_order 10
 execute as @e[tag=tower] at @s run setblock ~ 67 ~ minecraft:redstone_block
 execute as @e[tag=tower] at @s run setblock ~ 67 ~ minecraft:air
 
-# load terrain
-function practice:level/load_terrain
-
-# activate structure blocks
-execute as @e[tag=tower] at @s run setblock ~ 67 ~ minecraft:redstone_block
-execute as @e[tag=tower] at @s run setblock ~ 67 ~ minecraft:air
-execute as @e[tag=tower] at @s run setblock ~ 68 ~ minecraft:air

@@ -16,6 +16,8 @@
     "#minecraft:leaves",
     "#minecraft:planks",
     "minecraft:dragon_egg",
-    "minecraft:end_portal"
+    "minecraft:end_portal",
+    "minecraft:twisting_vines",
+    "minecraft:twisting_vines_plant" 
   ]
 }
