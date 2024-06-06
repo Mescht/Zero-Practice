@@ -32,5 +32,6 @@ scoreboard players reset * bed_place
 # kill out of map player
 execute as @a[gamemode=survival] at @s run kill @s[y=30,dy=-10]
 
-
 execute if score in_lobby flags matches 1 unless score editing_loadout flags matches 1 run function practice:inventory/rename/check
+
+#function practice:rot_detection

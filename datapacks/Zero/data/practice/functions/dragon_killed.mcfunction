@@ -4,7 +4,9 @@ scoreboard players set flying_to_fountain flags 1
 
 tellraw @a {"text":"\nDragon Killed!","color":"dark_green"}
 
-tellraw @a [{"text":"  Explosives: "},{"score":{"name":"explosives","objective":"stats"},"color":"green"}]
+execute if score plus_1 stats matches 0 run tellraw @a [{"text":"  Explosives: "},{"score":{"name":"explosives","objective":"stats"},"color":"green"}]
+scoreboard players operation explosives stats -= plus_1 stats
+execute if score plus_1 stats matches 1.. run tellraw @a [{"text":"  Explosives: "},{"score":{"name":"explosives","objective":"stats"},"color":"green"},{"text":"+"},{"score":{"name":"plus_1","objective":"stats"},"color":"green"}]
 execute if score timer settings matches 0 run tellraw @a [{"text":"  Time: "},{"nbt":"time_string","storage":"practice:timeparser","interpret":true,"color":"gold"}]
 tellraw @a [{"text":"  Tower: "},{"nbt":"active","storage":"practice:towers","color":"green"}]
 

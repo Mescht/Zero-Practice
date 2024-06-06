@@ -1,5 +1,4 @@
-execute if score index gui matches 0..8 run function practice:gui/pages/settings/list_menu
-#execute if score index gui matches 3 run function practice:gui/pages/settings/bossbar
+execute if score index gui matches 0..9 run function practice:gui/pages/settings/list_menu
 
 execute if score index gui matches 0 run scoreboard players operation location settings = value gui
 execute if score index gui matches 1 run scoreboard players operation direction settings = value gui
@@ -10,5 +9,6 @@ execute if score index gui matches 5 run scoreboard players operation knockback 
 execute if score index gui matches 6 run scoreboard players operation timer settings = value gui
 execute if score index gui matches 7 run scoreboard players operation rotation settings = value gui
 execute if score index gui matches 8 run scoreboard players operation randomize settings = value gui
+execute if score index gui matches 9 run scoreboard players operation iframe settings = value gui
 
 execute if score index gui matches 26 run function practice:gui/pages/home/set_active

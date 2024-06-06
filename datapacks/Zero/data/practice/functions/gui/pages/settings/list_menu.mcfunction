@@ -16,4 +16,4 @@ execute if score value gui matches 4 run data modify storage practice:gui pages[
 execute if score value gui matches 5 run data modify storage practice:gui pages[1].entries[{active:1b}].tag.display.Lore[5] set from storage practice:gui pages[1].entries[{active:1b}].tag.display.LoreColor[5]
 execute if score value gui matches 6 run data modify storage practice:gui pages[1].entries[{active:1b}].tag.display.Lore[6] set from storage practice:gui pages[1].entries[{active:1b}].tag.display.LoreColor[6]
 execute if score value gui matches 7 run data modify storage practice:gui pages[1].entries[{active:1b}].tag.display.Lore[7] set from storage practice:gui pages[1].entries[{active:1b}].tag.display.LoreColor[7]
-execute if score value gui matches 8 run data modify storage practice:gui pages[1].entries[{active:1b}].tag.display.Lore[8] set from storage practice:gui pages[1].entries[{active:1b}].tag.display.LoreColor[8]
+execute if score value gui matches 8 run data modify storage practice:gui pages[1].entries[{active:1b}].tag.display.Lore[8] set from storage practice:gui pages[1].entries[{active:1b}].tag.display.LoreColor[8]    
