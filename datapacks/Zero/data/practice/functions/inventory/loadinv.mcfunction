@@ -6,7 +6,6 @@ execute if score editing_loadout flags matches 1 run scoreboard players set rand
 execute if score randomize_act settings matches 0 run function practice:inventory/randomizer/randomize
 
 # load hotbar
-#data modify block 0 0 0 Items set from storage practice:loadouts selected.hotbar
 data modify block 0 0 0 Items set from storage practice:loadouts selected.hotbar
 loot replace entity @s hotbar.0 9 mine 0 0 0 minecraft:air{drop_contents:1b}
 data modify block 0 0 0 Items set value []

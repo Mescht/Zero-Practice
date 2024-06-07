@@ -1,0 +1,1 @@
+execute in the_end run tp @a 100 49 0 90 0

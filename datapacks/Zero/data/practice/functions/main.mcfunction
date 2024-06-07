@@ -26,12 +26,15 @@ execute as @a store result score player saturation run data get entity @s foodSa
 execute if score saturation settings matches 6 if score player saturation matches ..1 run effect give @a minecraft:saturation 1 0
 
 # first bed placed time
-execute as @a[scores={bed_place=1..}] if score explosives stats matches 0 run tellraw @a [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"text":" 1st Bed Placed","color":"white"}]
-scoreboard players reset * bed_place
+execute as @a[scores={bed_place=1}] if score explosives stats matches 0 run tellraw @a [{"nbt":"time_string","storage":"practice:timeparser","interpret":true},{"text":" 1st Bed Placed","color":"white"}]
+scoreboard players set @a[scores={bed_place=1}] bed_place 2
 
 # kill out of map player
 execute as @a[gamemode=survival] at @s run kill @s[y=30,dy=-10]
 
+# rename loadout check
 execute if score in_lobby flags matches 1 unless score editing_loadout flags matches 1 run function practice:inventory/rename/check
 
-#function practice:rot_detection
+# show nodes
+execute if score show_nodes settings matches 0 if score in_lobby flags matches 0 in the_end run function practice:nodes/show
+execute if score show_nodes settings matches 1 in the_end run function practice:nodes/show_all
