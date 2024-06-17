@@ -1,0 +1,1 @@
+execute in minecraft:the_end run spawnpoint @a 135 65 0

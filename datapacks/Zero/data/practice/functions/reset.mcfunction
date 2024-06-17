@@ -22,4 +22,6 @@ advancement revoke @a only minecraft:end/kill_dragon
 
 tellraw @a {"text":""}
 
+execute as @a[nbt=!{Fire:-20s}] at @s run function practice:extinguish
+
 difficulty peaceful
