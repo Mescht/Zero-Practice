@@ -1,7 +1,7 @@
 kill @e[type=#practice:remove]
 
 # player
-tp @a 135 65 0 90 0
+execute in minecraft:the_end run tp @a 135 65 0 90 0
 clear @a
 effect give @a minecraft:instant_health 10 10 true
 effect give @a[scores={death=1..}] minecraft:hunger 1 255

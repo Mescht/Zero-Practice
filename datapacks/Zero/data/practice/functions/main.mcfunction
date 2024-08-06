@@ -38,3 +38,6 @@ execute if score in_lobby flags matches 1 unless score editing_loadout flags mat
 # show nodes
 execute if score show_nodes settings matches 0 if score in_lobby flags matches 0 in the_end run function practice:nodes/show
 execute if score show_nodes settings matches 1 in the_end run function practice:nodes/show_all
+
+# player in overworld fix
+execute in minecraft:overworld positioned 0 0 0 as @a[distance=0..] in minecraft:the_end run tp @s 135 65 0 90 0

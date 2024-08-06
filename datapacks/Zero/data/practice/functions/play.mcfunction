@@ -29,6 +29,7 @@ schedule function practice:spawn_dragon 1t
 execute if score editing_loadout flags matches 1 run function practice:inventory/save_loadout
 
 # prepare player
+execute in minecraft:the_end run spawnpoint @a 135 65 0
 schedule function practice:tp_player 1t
 gamemode survival @a
 execute as @a run function practice:inventory/loadinv
