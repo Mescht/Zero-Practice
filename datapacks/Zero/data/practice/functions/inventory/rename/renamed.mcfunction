@@ -1,4 +1,3 @@
-say renamed
 execute in minecraft:the_end unless data block 136 66 3 {Text4:'{"text":""}'} run data modify storage practice:loadouts loadouts[{selected:1b}].name set from block 136 66 3 Text4
 execute in minecraft:the_end unless data block 136 66 3 {Text3:'{"text":""}'} run data modify storage practice:loadouts loadouts[{selected:1b}].name set from block 136 66 3 Text3
 execute in minecraft:the_end unless data block 136 66 3 {Text2:'{"text":""}'} run data modify storage practice:loadouts loadouts[{selected:1b}].name set from block 136 66 3 Text2
