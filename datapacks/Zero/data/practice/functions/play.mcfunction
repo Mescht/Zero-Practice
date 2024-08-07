@@ -27,6 +27,7 @@ schedule function practice:spawn_dragon 1t
 
 # save loadout if still editing
 execute if score editing_loadout flags matches 1 run function practice:inventory/save_loadout
+execute if score renaming flags matches 1 run function practice:inventory/rename/renamed
 
 # prepare player
 execute in minecraft:the_end run spawnpoint @a 135 65 0

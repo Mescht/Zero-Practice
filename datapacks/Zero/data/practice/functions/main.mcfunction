@@ -41,3 +41,7 @@ execute if score show_nodes settings matches 1 in the_end run function practice:
 
 # player in overworld fix
 execute in minecraft:overworld positioned 0 0 0 as @a[distance=0..] in minecraft:the_end run tp @s 135 65 0 90 0
+
+# repair lobby
+scoreboard players enable @a repair
+execute if entity @a[scores={repair=1..}] in minecraft:the_end run function practice:level/repair

@@ -1,1 +1,2 @@
-execute in minecraft:the_end run data merge block 136 66 3 {Text3:'{"text":"[Edit]","color":"gold","clickEvent":{"action":"run_command","value":"function practice:inventory/edit_loadout"}}'}
+scoreboard players reset @s sneaking
+execute in minecraft:the_end unless score renaming flags matches 1 run data merge block 136 66 3 {Text3:'{"text":"[Edit]","color":"gold","clickEvent":{"action":"run_command","value":"function practice:inventory/edit_loadout"}}'}

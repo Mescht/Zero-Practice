@@ -1,0 +1,1 @@
+scoreboard players set renaming flags 2
