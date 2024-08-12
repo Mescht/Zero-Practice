@@ -12,6 +12,7 @@ function practice:level/clear
 # reset scores
 scoreboard players set active timer 0
 scoreboard players reset * reset
+scoreboard players reset * reset_drop
 scoreboard players reset * death
 scoreboard players reset * height
 scoreboard players set in_lobby flags 1

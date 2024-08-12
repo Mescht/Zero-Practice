@@ -1,5 +1,6 @@
 # resets
 execute as @a[scores={reset=1..}] unless score in_lobby flags matches 1 in minecraft:the_end run function practice:reset
+execute as @a[scores={reset_drop=1..}] unless score in_lobby flags matches 1 in minecraft:the_end run function practice:reset
 execute as @a[scores={death=1..}] in minecraft:the_end run function practice:reset
 scoreboard players reset * reset
 
