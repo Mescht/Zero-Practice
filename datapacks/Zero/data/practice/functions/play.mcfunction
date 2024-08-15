@@ -37,6 +37,7 @@ execute as @a run function practice:inventory/loadinv
 effect clear @a
 effect give @a minecraft:instant_health 10 10 true
 execute if score randomize settings matches 0 run loot give @a loot practice:junk
+clear @a glass_pane
 
 # reset scores
 scoreboard players set timer timer 0

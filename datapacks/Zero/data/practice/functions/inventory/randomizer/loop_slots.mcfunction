@@ -3,7 +3,7 @@ execute store result score mod rng run data get storage practice:loadouts random
 function practice:random/generate
 
 # recursively rotate array to get the n-th element to the start
-function practice:inventory/randomizer/rotate_array
+execute if score r rng matches 1.. run function practice:inventory/randomizer/rotate_array
 
 # change slot number and remove that number from available slots
 data modify storage practice:loadouts randomizer.stack[0].Slot set from storage practice:loadouts randomizer.availableSlots[0]
