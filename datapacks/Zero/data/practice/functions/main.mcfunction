@@ -46,3 +46,6 @@ execute in minecraft:overworld positioned 0 0 0 as @a[distance=0..] in minecraft
 # repair lobby
 scoreboard players enable @a repair
 execute if entity @a[scores={repair=1..}] in minecraft:the_end run function practice:level/repair
+
+# pearl tracker
+execute unless score pearl_tracker settings matches 3 unless score in_lobby flags matches 1 run function practice:pearl_tracker/track

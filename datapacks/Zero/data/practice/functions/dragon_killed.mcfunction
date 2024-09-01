@@ -15,9 +15,9 @@ execute if score location_act settings matches 1 if score direction_act settings
 execute if score location_act settings matches 0 if score direction_act settings matches 1 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Front Straight CW","color":"green"}]
 execute if score location_act settings matches 1 if score direction_act settings matches 1 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Back Straight CW","color":"green"}]
 
-execute if score location_act settings matches 0 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Diagonal CWW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Diagonal CWW","color":"green"}]
-execute if score location_act settings matches 0 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Straight CWW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Straight CWW","color":"green"}]
+execute if score location_act settings matches 0 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Diagonal CCW","color":"green"}]
+execute if score location_act settings matches 1 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Diagonal CCW","color":"green"}]
+execute if score location_act settings matches 0 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Straight CCW","color":"green"}]
+execute if score location_act settings matches 1 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Straight CCW","color":"green"}]
 
 tellraw @a [{"text":"  Standing Height: "},{"score":{"name":"height","objective":"stats"},"color":"green"}]

@@ -1,0 +1,2 @@
+execute if score y pearl matches ..6499 run tellraw @a [{"text":"Pearled "},{"nbt":"dist","storage":"practice:coords_parser","interpret":"true","color":"aqua"},{"text":" Blocks"}]
+execute if score y pearl matches 6500.. run tellraw @a [{"text":"Pearled to y: "},{"nbt":"y","storage":"practice:coords_parser","interpret":"true","color":"blue"},{"text":" ("},{"nbt":"dist","storage":"practice:coords_parser","interpret":"true","color":"aqua"},{"text":" Blocks)"}]

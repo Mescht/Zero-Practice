@@ -17,6 +17,7 @@
       "minecraft:ender_pearl",
       "minecraft:chest",
       "minecraft:crossbow",
-      "minecraft:ender_eye"
+      "minecraft:ender_eye",
+      "minecraft:target"
     ]
   }

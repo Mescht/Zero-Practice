@@ -15,6 +15,7 @@ scoreboard players reset * reset
 scoreboard players reset * reset_drop
 scoreboard players reset * death
 scoreboard players reset * height
+scoreboard players reset * pearl
 scoreboard players set in_lobby flags 1
 scoreboard players reset flying_to_fountain flags
 
