@@ -21,7 +21,6 @@ function practice:gui/pages/home/enable_all_towers
 data modify storage practice:loadouts loadouts set from storage practice:loadouts default_loadouts
 scoreboard players set loadout inv 0
 
-
 scoreboard objectives setdisplay sidebar
 
 function practice:level/repair

@@ -2,6 +2,7 @@ kill @e[type=#practice:remove]
 
 # player
 execute in minecraft:the_end run tp @a 135 65 0 90 0
+execute if score onecycle flags matches 1 in minecraft:the_end run tp @a 135 65 0 90 -20
 clear @a
 effect give @a minecraft:instant_health 10 10 true
 effect give @a[scores={death=1..}] minecraft:hunger 1 255
@@ -17,6 +18,7 @@ scoreboard players reset * death
 scoreboard players reset * height
 scoreboard players reset * pearl
 scoreboard players set in_lobby flags 1
+scoreboard players reset onecycle flags
 scoreboard players reset flying_to_fountain flags
 
 bossbar set minecraft:dragon visible false
@@ -27,3 +29,5 @@ tellraw @a {"text":""}
 execute as @a[nbt=!{Fire:-20s}] at @s run function practice:extinguish
 
 difficulty peaceful
+
+kill @e[tag=dragon_pos]

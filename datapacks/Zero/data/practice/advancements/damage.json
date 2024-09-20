@@ -3,11 +3,6 @@
       "requirement": {
         "trigger": "minecraft:player_hurt_entity",
         "conditions": {
-          "damage": {
-            "type": {
-              "is_projectile": true
-            }
-          },
           "entity": {
             "type": "minecraft:ender_dragon"
           }
