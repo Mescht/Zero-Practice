@@ -1,4 +1,3 @@
-scoreboard players remove cooldown health 1
 
 title @a title {"text":""}
 

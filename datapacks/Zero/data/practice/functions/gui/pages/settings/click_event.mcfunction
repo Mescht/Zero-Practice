@@ -1,4 +1,4 @@
-execute if score index gui matches 0..11 run function practice:gui/pages/settings/list_menu
+execute if score index gui matches 0..13 run function practice:gui/pages/settings/list_menu
 
 execute if score index gui matches 0 run scoreboard players operation location settings = value gui
 execute if score index gui matches 1 run scoreboard players operation direction settings = value gui
@@ -12,3 +12,5 @@ execute if score index gui matches 8 run scoreboard players operation randomize 
 execute if score index gui matches 9 run scoreboard players operation iframe settings = value gui
 execute if score index gui matches 10 run scoreboard players operation show_nodes settings = value gui
 execute if score index gui matches 11 run scoreboard players operation pearl_tracker settings = value gui
+execute if score index gui matches 12 run scoreboard players operation fireres settings = value gui
+execute if score index gui matches 13 run scoreboard players operation disable_dragon settings = value gui

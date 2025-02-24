@@ -4,9 +4,11 @@ kill @e[type=#practice:remove]
 execute in minecraft:the_end run tp @a 135 65 0 90 0
 execute if score onecycle flags matches 1 in minecraft:the_end run tp @a 135 65 0 90 -20
 clear @a
+effect clear @a
 effect give @a minecraft:instant_health 10 10 true
 effect give @a[scores={death=1..}] minecraft:hunger 1 255
 stopsound @a
+gamemode survival @a
 
 function practice:level/clear
 
@@ -31,3 +33,7 @@ execute as @a[nbt=!{Fire:-20s}] at @s run function practice:extinguish
 difficulty peaceful
 
 kill @e[tag=dragon_pos]
+kill @e[type=armor_stand,tag=healing]
+kill @e[tag=save]
+
+setblock 0 73 0 air

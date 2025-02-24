@@ -10,20 +10,18 @@ execute if score timer settings matches 0 if score in_lobby flags matches 0 run 
 # run gui
 execute if score in_lobby flags matches 1 run function practice:gui/main
 
+# crystals
+execute store result score phase stats run data get entity @e[type=ender_dragon,limit=1] DragonPhase
+execute if score in_lobby flags matches 0 run function practice:check_crystals
+
 # dragon health and knockback
 function practice:health_display
 execute if score knockback settings matches 0 run function practice:knockback_display
 
 # post fight logic
-execute store result score phase stats run data get entity @e[type=ender_dragon,limit=1] DragonPhase
 execute if score phase stats matches 0 if score onecycle flags matches 1 run scoreboard players set phase stats 9
 execute if score phase stats matches 9 if score diff health matches 1.. run function practice:dragon_killed
 execute if score flying_to_fountain flags matches 1 if score phase stats matches 0 run function practice:finish
-
-#tellraw @a {"score":{"name":"phase","objective":"stats"}}
-
-# crystals
-execute if score in_lobby flags matches 0 run function practice:check_crystals
 
 # saturation
 execute as @a store result score player saturation run data get entity @s foodSaturationLevel
@@ -43,7 +41,7 @@ execute if score in_lobby flags matches 1 unless score editing_loadout flags mat
 execute if score show_nodes settings matches 0 if score in_lobby flags matches 0 in the_end run function practice:nodes/show
 execute if score show_nodes settings matches 1 in the_end run function practice:nodes/show_all
 
-# player in overworld fix
+# player in overworld fix (probably unnecessary since v1.2)
 execute in minecraft:overworld positioned 0 0 0 as @a[distance=0..] in minecraft:the_end run tp @s 135 65 0 90 0
 
 # repair lobby

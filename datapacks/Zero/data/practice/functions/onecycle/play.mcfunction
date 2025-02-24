@@ -4,12 +4,13 @@ execute if score renaming flags matches 1 run function practice:inventory/rename
 
 # prepare player
 execute in minecraft:the_end run spawnpoint @a 135 65 0
-function practice:tp_player
 gamemode survival @a
 execute as @a run function practice:inventory/loadinv
 effect clear @a
 effect give @a minecraft:instant_health 10 10 true
+clear @s writable_book
 clear @a glass_pane
+execute if score fireres settings matches 0 run effect give @a minecraft:fire_resistance 10000 0
 
 # reset scores
 scoreboard players set timer timer 0
@@ -44,12 +45,12 @@ function practice:random/generate
 scoreboard players remove r rng 150
 execute store result entity @e[tag=dragon_pos,limit=1] Pos[0] double 0.01 run scoreboard players get r rng
 
-execute as @e[tag=dragon_pos] at @s run summon minecraft:ender_dragon ~ ~ ~ {DragonPhase:3b}
+execute if score disable_dragon settings matches 0 as @e[tag=dragon_pos] at @s run summon minecraft:ender_dragon ~ ~ ~ {DragonPhase:3b}
 kill @e[tag=dragon_pos]
 
 # load fountain
-setblock 0 57 0 structure_block{posX:-12, posY:1, posZ:-12, mode: "LOAD", name: "practice:fountain_setup"}
-setblock 0 56 0 minecraft:redstone_block
-fill 0 56 0 0 57 0 minecraft:end_stone
+setblock 0 73 0 structure_block{posX:-12, posY:-15, posZ:-12, mode: "LOAD", name: "practice:fountain_setup"}
+setblock 0 74 0 minecraft:redstone_block
+fill 0 73 0 0 74 0 minecraft:air
 
 scoreboard players set onecycle flags 1

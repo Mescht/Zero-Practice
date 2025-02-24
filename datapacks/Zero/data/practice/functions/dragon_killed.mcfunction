@@ -1,4 +1,6 @@
-execute store result score height stats run data get entity @p Pos[1]
+execute store result score height stats run data get entity @p Pos[1] 2
+scoreboard players add height stats 1
+scoreboard players operation height stats /= 2 c
 
 scoreboard players set flying_to_fountain flags 1
 

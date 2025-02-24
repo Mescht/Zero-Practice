@@ -17,6 +17,8 @@ execute if score r rng > size1 rng run scoreboard players operation r rng += gap
 scoreboard players operation r rng += start rng
 scoreboard players operation r rng %= 3600 c
 
+tellraw @a[tag=debug] [{"text":"[DEBUG] Rotation: ","color":"dark_purple"},{"score":{"name":"r","objective":"rng"}}]
+
 # spawn dragon
 execute if score r rng matches 0..449 in minecraft:the_end run summon minecraft:ender_dragon 0 128 0 {DragonPhase:0b,Rotation:[22.5f,0f]}
 execute if score r rng matches 450..899 in minecraft:the_end run summon minecraft:ender_dragon 0 128 0 {DragonPhase:0b,Rotation:[67.5f,0f]}

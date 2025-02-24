@@ -23,7 +23,7 @@ function practice:level/load_terrain
 function practice:nodes/force
 
 # spawn dragon
-schedule function practice:spawn_dragon 1t
+execute if score disable_dragon settings matches 0 run schedule function practice:spawn_dragon 1t
 
 # save loadout if still editing
 execute if score editing_loadout flags matches 1 run function practice:inventory/save_loadout
@@ -36,8 +36,10 @@ gamemode survival @a
 execute as @a run function practice:inventory/loadinv
 effect clear @a
 effect give @a minecraft:instant_health 10 10 true
+clear @s writable_book
 execute if score randomize settings matches 0 run loot give @a loot practice:junk
 clear @a glass_pane
+execute if score fireres settings matches 0 run effect give @a minecraft:fire_resistance 10000 0
 
 # reset scores
 scoreboard players set timer timer 0
@@ -67,3 +69,6 @@ execute if score diff saturation matches 7..8 run effect give @a minecraft:satur
 execute if score diff saturation matches 9..10 run effect give @a minecraft:saturation 1 4
 
 difficulty easy
+
+# custom commands
+execute in minecraft:the_end run function practice:custom_commands/create

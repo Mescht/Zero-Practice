@@ -18,6 +18,9 @@
       "minecraft:chest",
       "minecraft:crossbow",
       "minecraft:ender_eye",
-      "minecraft:target"
+      "minecraft:target",
+      "minecraft:potion",
+      "minecraft:dragon_head",
+      "minecraft:bedrock"
     ]
   }

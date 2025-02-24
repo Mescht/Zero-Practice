@@ -4,6 +4,8 @@ data remove storage practice:loadouts selected.armor
 data remove storage practice:loadouts selected.hotbar
 data remove storage practice:loadouts selected.inventory
 
+data remove storage practice:loadouts selected.commands
+
 # get number of used slots
 execute store result score slot_count inv run data get storage practice:loadouts selected.inventory_all
 
