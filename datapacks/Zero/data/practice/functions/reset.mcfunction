@@ -16,6 +16,8 @@ function practice:level/clear
 scoreboard players set active timer 0
 scoreboard players reset * reset
 scoreboard players reset * reset_drop
+scoreboard players reset * reset_i_pick
+scoreboard players reset * reset_g_pick
 scoreboard players reset * death
 scoreboard players reset * height
 scoreboard players reset * pearl
@@ -28,7 +30,7 @@ advancement revoke @a only minecraft:end/kill_dragon
 
 tellraw @a {"text":""}
 
-execute as @a[nbt=!{Fire:-20s}] at @s run function practice:extinguish
+execute as @a[nbt=!{Fire:-20s}] at @s run function practice:extinguish/extinguish
 
 difficulty peaceful
 
