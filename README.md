@@ -15,3 +15,10 @@ Only [certain blocks](https://github.com/Mescht/Zero-Practice/blob/main/datapack
 - Control over Spawn and Saturation
   
 ... and more
+
+## Transfer Loadouts to new Version
+
+To tranfer your loadouts copy the file `data\command_storage_zero_practice_loadouts.dat` from the old map the the new one.
+
+⚠️ If you are upgrading from a version before 1.2.2 you need to first run the following command to create this file:
+`/data modify storage zero_practice_loadouts:loadouts {} merge from storage practice:loadouts`
