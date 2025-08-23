@@ -1,5 +1,5 @@
-data modify storage practice:loadouts randomizer.availableSlots append from storage practice:loadouts randomizer.availableSlots[0]
-data remove storage practice:loadouts randomizer.availableSlots[0]
+data modify storage zero_practice_loadouts:loadouts randomizer.availableSlots append from storage zero_practice_loadouts:loadouts randomizer.availableSlots[0]
+data remove storage zero_practice_loadouts:loadouts randomizer.availableSlots[0]
 
 scoreboard players remove r rng 1
 

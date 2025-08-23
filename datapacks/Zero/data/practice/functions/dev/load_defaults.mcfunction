@@ -18,7 +18,7 @@ execute store result score pearl_tracker settings run data get storage practice:
 function practice:gui/pages/home/enable_all_towers
 
 # load default loadouts
-data modify storage practice:loadouts loadouts set from storage practice:loadouts default_loadouts
+data modify storage zero_practice_loadouts:loadouts loadouts set from storage zero_practice_loadouts:loadouts default_loadouts
 scoreboard players set loadout inv 0
 
 scoreboard objectives setdisplay sidebar

@@ -1,2 +1,2 @@
 scoreboard players reset @s sneaking
-execute in minecraft:the_end unless score renaming flags matches 1 run data merge block 136 66 3 {Text3:'{"text":"[Edit]","color":"gold","clickEvent":{"action":"run_command","value":"function practice:inventory/edit_loadout"}}'}
+execute in minecraft:the_end unless score renaming flags matches 1 run data merge block 136 66 3 {Text3:'{"text":"[Edit]","color":"gold","clickEvent":{"action":"run_command","value":"execute if score @s time_since_death > *threshold time_since_death run function practice:inventory/edit_loadout"}}'}

@@ -1,5 +1,5 @@
-data modify storage practice:loadouts selected.inventory_all set from entity @s Inventory
+data modify storage zero_practice_loadouts:loadouts selected.inventory_all set from entity @s Inventory
 
 function practice:inventory/sortinv
 
-data remove storage practice:loadouts selected.inventory_all
+data remove storage zero_practice_loadouts:loadouts selected.inventory_all

@@ -8,6 +8,8 @@ execute if score index gui matches 4 run scoreboard players operation spawn sett
 execute if score index gui matches 5 run scoreboard players operation knockback settings = value gui
 execute if score index gui matches 6 run scoreboard players operation timer settings = value gui
 execute if score index gui matches 7 run scoreboard players operation rotation settings = value gui
+execute if score index gui matches 7 run scoreboard objectives setdisplay sidebar
+execute if score index gui matches 7 if score rotation settings matches 3 run scoreboard objectives setdisplay sidebar custom_rotation
 execute if score index gui matches 8 run scoreboard players operation randomize settings = value gui
 execute if score index gui matches 9 run scoreboard players operation iframe settings = value gui
 execute if score index gui matches 10 run scoreboard players operation show_nodes settings = value gui

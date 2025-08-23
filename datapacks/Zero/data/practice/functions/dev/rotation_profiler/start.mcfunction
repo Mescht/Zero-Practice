@@ -3,4 +3,4 @@ scoreboard players set profiler rotation 1
 scoreboard players set in_lobby flags 0
 scoreboard players set active timer 1
 
-function practice:rotation_profiler/loop
+function practice:dev/rotation_profiler/loop

@@ -5,4 +5,4 @@ execute if score active timer matches 1 run scoreboard players add timer timer 1
 function practice:timer/calculate_units
 function practice:timer/parser
 
-title @a actionbar [{"nbt":"time_string","storage":"practice:timeparser","interpret":true}]
+execute if score timer settings matches 0 run title @a actionbar [{"nbt":"time_string","storage":"practice:timeparser","interpret":true}]

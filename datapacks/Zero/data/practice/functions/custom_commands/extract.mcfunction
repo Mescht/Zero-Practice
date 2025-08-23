@@ -1,1 +1,1 @@
-data modify storage practice:loadouts selected.commands append from storage practice:loadouts selected.inventory_all[-1].tag.pages[]
+data modify storage zero_practice_loadouts:loadouts selected.commands append from storage zero_practice_loadouts:loadouts selected.inventory_all[-1].tag.pages[]

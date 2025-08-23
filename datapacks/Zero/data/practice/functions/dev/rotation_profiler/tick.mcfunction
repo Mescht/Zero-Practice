@@ -1,1 +1,2 @@
-execute if score timer timer matches 100 run function practice:rotation_profiler/get_result
+function practice:dev/rotation_profiler/rot_detection
+execute if score timer timer matches 100 run function practice:dev/rotation_profiler/get_result

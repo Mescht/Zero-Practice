@@ -3,4 +3,4 @@ execute if score cw rotation > ccw rotation run tellraw @a [{"score":{"name":"se
 execute if score ccw rotation > cw rotation run tellraw @a [{"score":{"name":"set","objective":"rotation"}},{"text":" ccw"}]
 
 scoreboard players add set rotation 10
-execute if score set rotation matches ..35999 run function practice:rotation_profiler/loop
+execute if score set rotation matches ..35999 run function practice:dev/rotation_profiler/loop

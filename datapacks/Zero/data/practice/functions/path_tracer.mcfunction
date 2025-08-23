@@ -1,0 +1,1 @@
+execute as @e[type=ender_dragon,limit=1] at @s run summon snowball ^ ^ ^-.5 {NoGravity:1b}

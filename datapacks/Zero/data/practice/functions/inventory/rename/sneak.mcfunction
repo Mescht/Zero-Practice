@@ -1,1 +1,1 @@
-execute in minecraft:the_end run data merge block 136 66 3 {Text3:'{"text":"[Rename]","color":"yellow","clickEvent":{"action":"run_command","value":"function practice:inventory/rename/rename"}}'}
+execute in minecraft:the_end run data merge block 136 66 3 {Text3:'{"text":"[Rename]","color":"yellow","clickEvent":{"action":"run_command","value":"execute if score @s time_since_death > *threshold time_since_death run function practice:inventory/rename/rename"}}'}
