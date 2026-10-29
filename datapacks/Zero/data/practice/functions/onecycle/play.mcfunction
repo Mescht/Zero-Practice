@@ -1,3 +1,5 @@
+execute if score fight_heal flags matches 1 run function practice:fight/heal_end
+
 # save loadout if still editing
 execute if score editing_loadout flags matches 1 run function practice:inventory/save_loadout
 execute if score renaming flags matches 1 run function practice:inventory/rename/renamed

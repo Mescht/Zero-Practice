@@ -21,6 +21,10 @@
       "minecraft:target",
       "minecraft:potion",
       "minecraft:dragon_head",
-      "minecraft:bedrock"
+      "minecraft:bedrock",
+      "minecraft:crying_obsidian",
+      "minecraft:chorus_flower",
+      "minecraft:oak_sign",
+      "minecraft:end_crystal"
     ]
   }

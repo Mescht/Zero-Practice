@@ -3,8 +3,12 @@ execute if score location_act settings matches 0 run data modify storage practic
 execute if score location_act settings matches 1 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup values[1]
 execute if score direction_act settings matches 0 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[0]
 execute if score direction_act settings matches 1 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[1]
-execute if score rotation_act settings matches 0 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[0]
-execute if score rotation_act settings matches 1 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[1]
+execute if score rotation settings matches 0..3 if score rotation_act settings matches 0 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[0]
+execute if score rotation settings matches 0..3 if score rotation_act settings matches 1 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[1]
+execute if score rotation settings matches 4 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[2]
+execute if score rotation settings matches 5 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[3]
+execute if score rotation settings matches 6 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[4]
+execute if score rotation settings matches 7 run data modify storage practice:rotation_lookup temp set from storage practice:rotation_lookup temp[5]
 
 execute store result score start rng run data get storage practice:rotation_lookup temp[0]
 execute store result score mod rng run data get storage practice:rotation_lookup temp[1]
@@ -19,6 +23,10 @@ scoreboard players operation r rng %= 3600 c
 
 execute if score rotation settings matches 3 run scoreboard players operation r rng = value custom_rotation
 
+scoreboard players operation angle_act settings = r rng
+scoreboard players operation angle_act settings %= 3600 c
+function practice:angle/band
+
 tellraw @a[tag=debug] [{"text":"[DEBUG] Rotation: ","color":"dark_purple"},{"score":{"name":"r","objective":"rng"}}]
 
 # spawn dragon
@@ -32,3 +40,5 @@ execute if score r rng matches 2700..3149 in minecraft:the_end run summon minecr
 execute if score r rng matches 3150..3599 in minecraft:the_end run summon minecraft:ender_dragon 0.0 128 0.0 {DragonPhase:0b,Rotation:[337.5f,0f]}
 
 execute store result entity @e[type=minecraft:ender_dragon,limit=1] Rotation[0] float 0.1 run scoreboard players get r rng
+
+execute if score crystal_break settings matches 1 run function practice:fight/adopt

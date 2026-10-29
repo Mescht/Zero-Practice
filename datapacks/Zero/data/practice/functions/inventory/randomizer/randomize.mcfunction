@@ -3,7 +3,14 @@ data modify storage zero_practice_loadouts:loadouts randomizer.stack set from st
 data modify storage zero_practice_loadouts:loadouts randomizer.availableSlots set value [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26]
 data remove storage zero_practice_loadouts:loadouts randomizer.inventory
 
+data modify storage zero_practice_loadouts:loadouts randomizer.inventory append from storage zero_practice_loadouts:loadouts randomizer.stack[{Slot:0b}]
+data remove storage zero_practice_loadouts:loadouts randomizer.stack[{Slot:0b}]
+data remove storage zero_practice_loadouts:loadouts randomizer.availableSlots[0]
+data modify storage zero_practice_loadouts:loadouts randomizer.inventory append from storage zero_practice_loadouts:loadouts randomizer.stack[{Slot:4b}]
+data remove storage zero_practice_loadouts:loadouts randomizer.stack[{Slot:4b}]
+data remove storage zero_practice_loadouts:loadouts randomizer.availableSlots[3]
+
 # exclude egg from randomizer
-execute if data storage zero_practice_loadouts:loadouts selected.inventory[{id:"minecraft:egg"}] run function practice:inventory/randomizer/egg
+execute if data storage zero_practice_loadouts:loadouts randomizer.stack[{id:"minecraft:egg"}] run function practice:inventory/randomizer/egg
 
 function practice:inventory/randomizer/loop_slots

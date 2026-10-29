@@ -3,8 +3,8 @@ scoreboard players set crystals stats 0
 execute as @e[type=minecraft:end_crystal] run scoreboard players add crystals stats 1
 
 execute if score crystals stats < crystals_last stats run tellraw @a {"text":"Crystal Destroyed","color":"red"}
-execute if score crystals stats < crystals_last stats if score phase stats matches 0 run data modify entity @e[type=minecraft:ender_dragon,limit=1] DragonPhase set value 4b
-execute if score crystals stats < crystals_last stats if score phase stats matches 0 run tellraw @a[tag=debug] {"text":"[DEBUG] Phase Changed to 4","color":"dark_purple"}
+execute if score crystals stats < crystals_last stats if score phase stats matches 0 unless score crystal_break settings matches 1 run data modify entity @e[type=minecraft:ender_dragon,limit=1] DragonPhase set value 4b
+execute if score crystals stats < crystals_last stats if score phase stats matches 0 unless score crystal_break settings matches 1 run tellraw @a[tag=debug] {"text":"[DEBUG] Phase Changed to 4","color":"dark_purple"}
 
 # damage from crystal
 scoreboard players reset crystal_damage health

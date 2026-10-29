@@ -55,3 +55,5 @@ execute unless score pearl_tracker settings matches 3 unless score in_lobby flag
 
 # dragon path tracer
 execute if score path_tracer settings matches 1 run function practice:path_tracer
+
+function practice:fight/tick

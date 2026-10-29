@@ -1,3 +1,6 @@
+execute if score in_lobby flags matches 0 if score active timer matches 1 unless score flying_to_fountain flags matches 1 unless score onecycle flags matches 1 if score reset_info settings matches 0 run function practice:reset_info
+
+execute if entity 7b4c6e20-8da6-4e7a-a934-2bbd079eeaf7 run function practice:fight/remove
 kill @e[type=#practice:remove]
 
 # player

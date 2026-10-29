@@ -2,14 +2,9 @@ execute if score timer settings matches 0 run tellraw @a [{"text":"  Time: "},{"
 
 tellraw @a [{"text":"  Tower: "},{"nbt":"active","storage":"practice:towers","color":"green"}]
 
-execute if score location_act settings matches 0 if score direction_act settings matches 0 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Front Diagonal CW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 0 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Back Diagonal CW","color":"green"}]
-execute if score location_act settings matches 0 if score direction_act settings matches 1 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Front Straight CW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 1 if score rotation_act settings matches 0 run tellraw @a [{"text":"  Type: "},{"text":"Back Straight CW","color":"green"}]
-
-execute if score location_act settings matches 0 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Diagonal CCW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 0 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Diagonal CCW","color":"green"}]
-execute if score location_act settings matches 0 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Front Straight CCW","color":"green"}]
-execute if score location_act settings matches 1 if score direction_act settings matches 1 if score rotation_act settings matches 1 run tellraw @a [{"text":"  Type: "},{"text":"Back Straight CCW","color":"green"}]
+function practice:print_type
 
 tellraw @a [{"text":"  Standing Height: "},{"score":{"name":"height","objective":"stats"},"color":"green"}]
+scoreboard players operation buried settings = spawn_act settings
+scoreboard players add buried settings 51
+execute if score spawn_act settings matches 3..7 run tellraw @a [{"text":"  Buried Height: "},{"score":{"name":"buried","objective":"settings"},"color":"green"}]
